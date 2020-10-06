@@ -6,24 +6,13 @@ const sequelize = new Sequelize({
     storage: 'employees.sqlite'
 })
 // authenticate to see if the modules are properly installed
-sequelize.authenticate()
-    .then(() => {
-        console.log("Good");
-    })
-    .catch(err => {
-        console.log("Bad: " + err);
-    })
-
+// if they are you can comment this out
 const Employee = sequelize.import("./models/employees.js");
 
-//Display every employees name
-Employee.findAll().then(users => {
-    users.forEach((u) => {
-        console.log(u.first_name + " " + u.last_name);
-    });
-})
+//Q1: Display every employee in JSON format
 
-//Display every employee in JSON format
-Employee.findAll().then(users => {
-    console.log("All the users: ", JSON.stringify(users, null, 4));
-})
+//Q2: Display every male in JSON format
+
+//Q3: Display every female that works at Babblestorm in JSON format
+
+//Q4: Display the full name of everyone who is 26 years old (just their full name, not JSON)
