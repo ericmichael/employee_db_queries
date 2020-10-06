@@ -5,9 +5,9 @@ const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: 'employees.sqlite'
 })
-// authenticate to see if the modules are properly installed
-// if they are you can comment this out
-const Employee = sequelize.import("./models/employees.js");
+
+// uncomment this when you have created the employee model
+// const Employee = sequelize.import("./models/employees.js");
 
 //Q1: Display every employee in JSON format
 
